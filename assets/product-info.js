@@ -161,7 +161,7 @@ if (!customElements.get('product-info')) {
         }
       }
 
-      updateOptionValues(html) {
+      updateVariantDesc(html) {
         const oldDesc = this.getElmentById("varinat-desc");
         const newDesc = html.getElementById("variant-desc");
 
