@@ -161,6 +161,14 @@ if (!customElements.get('product-info')) {
         }
       }
 
+      updateOptionValues(html) {
+        const oldDesc = this.getElmentById("varinat-desc");
+        const newDesc = html.getElementById("variant-desc");
+
+        HTMLUpdateUtility.viewTransition(oldDesc, newDesc);
+        
+      }
+
       handleUpdateProductInfo(productUrl) {
         return (html) => {
           const variant = this.getSelectedVariant(html);
@@ -169,6 +177,7 @@ if (!customElements.get('product-info')) {
           this.updateOptionValues(html);
           this.updateURL(productUrl, variant?.id);
           this.updateVariantInputs(variant?.id);
+          this.updateVariantDesc(html);
 
           if (!variant) {
             this.setUnavailable();
