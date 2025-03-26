@@ -165,7 +165,10 @@ if (!customElements.get('product-info')) {
         const oldDesc = document.getElementById("variant-desc");
         const newDesc = html.getElementById("variant-desc");
         
-        console.log(oldDesc, newDesc);        
+        console.log(oldDesc, newDesc);
+
+        HTMLUpdateUtility.viewTransition(oldDesc, newDesc);
+
       }
 
       handleUpdateProductInfo(productUrl) {
