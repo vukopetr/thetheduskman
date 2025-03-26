@@ -164,9 +164,8 @@ if (!customElements.get('product-info')) {
       updateVariantDesc(html) {
         const oldDesc = document.getElementById("varinat-desc");
         const newDesc = html.getElementById("variant-desc");
-
-        HTMLUpdateUtility.viewTransition(oldDesc, newDesc);
         
+        console.log(oldDesc, newDesc);        
       }
 
       handleUpdateProductInfo(productUrl) {
