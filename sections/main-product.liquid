@@ -462,6 +462,9 @@
                 %}
 
               test
+              <div id="variant-desc">
+                {{ product.selected_or_first_available_variant.variant_desc }}
+              </div>
 
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
