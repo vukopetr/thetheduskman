@@ -162,7 +162,7 @@ if (!customElements.get('product-info')) {
       }
 
       updateVariantDesc(html) {
-        const oldDesc = this.getElmentById("varinat-desc");
+        const oldDesc = document.getElmentById("varinat-desc");
         const newDesc = html.getElementById("variant-desc");
 
         HTMLUpdateUtility.viewTransition(oldDesc, newDesc);
